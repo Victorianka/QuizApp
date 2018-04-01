@@ -12,7 +12,7 @@
     <string name="ques_2_text">Which company this logo belongs to\:</string>
     <string name="ques_3_text">Which modules are included in the Android Nanodegree\:</string>
     <string name="ques_4_text">Complete the sentence\: \n\"I destroy my enemy when I ...\" - Abraham Lincoln</string>
-    <string name="ques_5_text">placer</string>
+    <string name="ques_5_text">Which of the people below are involved in the Nanodegree\?</string>
     <string name="ques_6_text">placer</string>
     <string name="ques_hint">Answer</string>
     <string name="ques_2_but1">Udemy</string>
