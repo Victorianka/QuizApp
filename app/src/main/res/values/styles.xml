@@ -9,20 +9,34 @@
     </style>
 
     <!-- RadioButtons theme. -->
-    <style name="RadioButtons" >
+    <style name="RadioButtons" parent="android:Widget.CompoundButton.RadioButton">
         <!-- Customize your theme here. -->
         <item name="android:padding">4dp</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- Drawables theme. -->
-    <style name="Drawables" >
-        <!-- Customize your theme here. -->
+    <!-- Questions Body theme. -->
+    <style name="QuestionsBodyStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">#2a194d</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/question_body</item>
+    </style>
 
-        <item name="android:layout_height">350dp</item>
+    <!-- Questions Header theme. -->
+    <style name="QuestionsHeaderStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">#624996</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/question_header</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Layouts theme. -->
+    <style name="QuestionsLayout" parent="Base.ThemeOverlay.AppCompat">
+        <!-- Customize your theme here. -->
         <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/background_rounded</item>
+        <item name="android:padding">4dp</item>
     </style>
 
 </resources>
