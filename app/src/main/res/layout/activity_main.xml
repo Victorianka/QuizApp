@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_padding="8dp"
+        android:padding="8dp"
         android:background="#08b1e5"
         android:orientation="vertical">
 
@@ -283,7 +283,17 @@
 
         </LinearLayout>
 
+        <Button 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" 
+            android:text="@string/submitButton"
+            android:onClick="submitButtonClicked" 
+            android:id="@+id/submitButton">
+    </Button>
+        
     </LinearLayout>
+    
+    
 
 
 </ScrollView>
