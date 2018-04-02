@@ -29,4 +29,5 @@
     <string name="ques_5_but1">nVidia</string>
     <string name="ques_5_but2">Apple</string>
     <string name="ques_5_but3">Google</string>
+    <string name="submitButton">Check answers</string>
 </resources>
