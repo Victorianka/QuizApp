@@ -9,21 +9,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
         android:background="#08b1e5"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="8dp">
 
         <TextView
             style="@style/QuestionsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/question_body"
-            android:text="@string/welcome_message" />
+            android:text="@string/welcome_message"
+            android:textSize="@dimen/question_body" />
 
         <LinearLayout
+            style="@style/QuestionsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/QuestionsLayout"
             android:orientation="vertical">
 
             <TextView
@@ -42,6 +42,7 @@
                 android:text="@string/ques_1_text" />
 
             <EditText
+                android:id="@+id/ques1_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ques_hint"
@@ -79,6 +80,7 @@
                 android:src="@drawable/logo1" />
 
             <RadioGroup
+                android:id="@+id/ques2_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkedButton="@id/ques2_but1">
@@ -109,9 +111,9 @@
         </LinearLayout>
 
         <LinearLayout
+            style="@style/QuestionsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/QuestionsLayout"
             android:orientation="vertical">
 
             <TextView
@@ -130,24 +132,28 @@
                 android:text="@string/ques_3_text" />
 
             <CheckBox
+                android:id="@+id/ques3_box1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
                 android:text="@string/ques_3_but1" />
 
             <CheckBox
+                android:id="@+id/ques3_box2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
                 android:text="@string/ques_3_but2" />
 
             <CheckBox
+                android:id="@+id/ques3_box3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
                 android:text="@string/ques_3_but3" />
 
             <CheckBox
+                android:id="@+id/ques3_box4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
@@ -157,9 +163,9 @@
         </LinearLayout>
 
         <LinearLayout
+            style="@style/QuestionsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/QuestionsLayout"
             android:orientation="vertical">
 
             <TextView
@@ -177,6 +183,7 @@
                 android:text="@string/ques_4_text" />
 
             <EditText
+                android:id="@+id/ques4_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ques_hint"
@@ -186,9 +193,9 @@
         </LinearLayout>
 
         <LinearLayout
+            style="@style/QuestionsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/QuestionsLayout"
             android:orientation="vertical">
 
             <TextView
@@ -206,6 +213,7 @@
                 android:text="@string/ques_5_text" />
 
             <RadioGroup
+                android:id="@+id/ques5_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkedButton="@id/ques5_but1">
@@ -237,9 +245,9 @@
         </LinearLayout>
 
         <LinearLayout
+            style="@style/QuestionsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/QuestionsLayout"
             android:orientation="vertical">
 
             <TextView
@@ -257,24 +265,28 @@
                 android:text="@string/ques_6_text" />
 
             <CheckBox
+                android:id="@+id/ques6_box1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
                 android:text="@string/ques_6_but1" />
 
             <CheckBox
+                android:id="@+id/ques6_box2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
                 android:text="@string/ques_6_but2" />
 
             <CheckBox
+                android:id="@+id/ques6_box3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
                 android:text="@string/ques_6_but3" />
 
             <CheckBox
+                android:id="@+id/ques6_box4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/padding"
@@ -283,17 +295,15 @@
 
         </LinearLayout>
 
-        <Button 
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content" 
-            android:text="@string/submitButton"
-            android:onClick="submitButtonClicked" 
-            android:id="@+id/submitButton">
-    </Button>
-        
+            android:layout_gravity="center"
+            android:onClick="submitButtonClicked"
+            android:text="@string/submitButton"></Button>
+
     </LinearLayout>
-    
-    
 
 
 </ScrollView>
