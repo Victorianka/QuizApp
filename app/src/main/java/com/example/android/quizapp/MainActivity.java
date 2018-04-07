@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     Button submit;
     int quizScore;
 
+    //All global variables should be declared private for a better encapsulation of the data.
+    //more info about encapsulation is here: http://sampleprogramz.com/android/encapsulation.php
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         String answerOne = getQuestionOneUserInput();
         if (answerOne.trim().equalsIgnoreCase("though fools rarely differ")) {
             quizScore = quizScore + 1;
+            //You could simplify this code as follow: quizScore++;
         }
     }
 
@@ -93,6 +97,16 @@ public class MainActivity extends AppCompatActivity {
             quizScore = quizScore + 1;
         }
     }
+
+    /**There is no need to store the returned value of this check into a boolean, you could make this code shorter as follow:
+
+     private void checkQuestionFiveAnswer() {
+     RadioButton quesFiveAnswer = (RadioButton) findViewById(R.id.ques2_but2);
+     if (quesFiveAnswer.isChecked()) {
+     quizScore++;
+     }
+     }
+     **/
 
     //This is to check answer for Q6
 
