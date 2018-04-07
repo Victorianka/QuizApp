@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     Button submit;
-    int quizScore = 0;
+    int quizScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkQuestionOneAnswer() {
         String answerOne = getQuestionOneUserInput();
-        if (answerOne.trim().equalsIgnoreCase("though only fools differ")) {
+        if (answerOne.trim().equalsIgnoreCase("though fools rarely differ")) {
             quizScore = quizScore + 1;
         }
     }
 
-        //This is to check answer for Q2
+    //This is to check answer for Q2
 
     private void checkQuestionTwoAnswer() {
         RadioButton quesTwoAnswer = (RadioButton) findViewById(R.id.ques2_but2);
@@ -56,12 +56,14 @@ public class MainActivity extends AppCompatActivity {
     private void checkQuestionThreeAnswer() {
         CheckBox questionThreeAnsOne = (CheckBox) findViewById(R.id.ques3_box1);
         CheckBox questionThreeAnsTwo = (CheckBox) findViewById(R.id.ques3_box2);
+        CheckBox questionThreeAnsThree = (CheckBox) findViewById(R.id.ques3_box3);
         CheckBox questionThreeAnsFour = (CheckBox) findViewById(R.id.ques3_box4);
         boolean isQuestionThreeAnsOneChecked = questionThreeAnsOne.isChecked();
         boolean isQuestionThreeAnsTwoChecked = questionThreeAnsTwo.isChecked();
+        boolean isQuestionThreeAnsThreeChecked = questionThreeAnsThree.isChecked();
         boolean isQuestionThreeAnsFourChecked = questionThreeAnsFour.isChecked();
 
-        if (isQuestionThreeAnsOneChecked && isQuestionThreeAnsTwoChecked && isQuestionThreeAnsFourChecked) {
+        if (isQuestionThreeAnsOneChecked && isQuestionThreeAnsTwoChecked && !isQuestionThreeAnsThreeChecked && isQuestionThreeAnsFourChecked) {
             quizScore = quizScore + 1;
         }
     }
@@ -82,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             quizScore = quizScore + 1;
         }
     }
-        //This is to check answer for Q5
+    //This is to check answer for Q5
 
     private void checkQuestionFiveAnswer() {
         RadioButton quesFiveAnswer = (RadioButton) findViewById(R.id.ques2_but2);
@@ -127,11 +129,20 @@ public class MainActivity extends AppCompatActivity {
     final View.OnClickListener submitButtonOnClickListener = new View.OnClickListener() {
         public void onClick(final View v) {
             checkAllQuestions();
-            Toast.makeText(MainActivity.this, "Correct Answers: " + quizScore + "/6",
-                    Toast.LENGTH_LONG).show();
-            resetCounterCorrectAnswers();
+            if (quizScore == 6) {
+                Toast.makeText(MainActivity.this, "Correct Answers: " + quizScore + "/6! You rock!!",
+                        Toast.LENGTH_LONG).show();
+                resetCounterCorrectAnswers();
+            } else if (quizScore == 0){
+                Toast.makeText(MainActivity.this, "Corrent Answers: " + quizScore + "/6. You can do better!",
+                        Toast.LENGTH_LONG).show();
+                resetCounterCorrectAnswers();
+            } else {
+                Toast.makeText(MainActivity.this, "Corrent Answers: " + quizScore + "/6. You can do better!",
+                        Toast.LENGTH_LONG).show();
+                resetCounterCorrectAnswers();
+            }
         }
     };
 }
-
 

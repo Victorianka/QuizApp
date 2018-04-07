@@ -48,7 +48,6 @@
                 android:hint="@string/ques_hint"
                 android:inputType="text" />
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -159,7 +158,6 @@
                 android:padding="@dimen/padding"
                 android:text="@string/ques_3_but4" />
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -188,7 +186,6 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/ques_hint"
                 android:inputType="text" />
-
 
         </LinearLayout>
 
@@ -241,7 +238,6 @@
 
             </RadioGroup>
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -292,7 +288,6 @@
                 android:padding="@dimen/padding"
                 android:text="@string/ques_6_but4" />
 
-
         </LinearLayout>
 
         <Button
@@ -300,10 +295,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:onClick="submitButtonClicked"
-            android:text="@string/submitButton"></Button>
+            android:text="@string/submitButton"/>
 
     </LinearLayout>
-
 
 </ScrollView>
